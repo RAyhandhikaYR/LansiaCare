@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include user preferences -->
+    <include domain="sharedpref" path="lansia_care_prefs.xml"/>
+
+    <!-- Include database -->
+    <include domain="database" path="lansia_care_database"/>
+
+    <!-- Exclude sensitive data -->
+    <exclude domain="database" path="lansia_care_database-wal"/>
+    <exclude domain="database" path="lansia_care_database-shm"/>
+</full-backup-content>

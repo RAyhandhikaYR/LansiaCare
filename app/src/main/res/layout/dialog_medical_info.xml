@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_hospital"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Informasi Medis Darurat"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/roboto_bold" />
+
+        </LinearLayout>
+
+        <!-- Alert Box -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/info">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_info"
+                    android:layout_marginEnd="12dp"
+                    android:layout_gravity="top"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Informasi ini penting untuk tenaga medis dalam situasi darurat. Pastikan selalu update data ini."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/roboto_regular" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Current Medications -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💊 Obat yang Sedang Dikonsumsi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold" />
+
+            <TextView
+                android:id="@+id/tv_current_medications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memuat data obat..."
+                android:textSize="14sp"
+                android:textColor="@color/on_surface_variant"
+                android:background="@color/surface_variant"
+                android:padding="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:minLines="3" />
+
+        </LinearLayout>
+
+        <!-- Allergies -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Alergi Obat/Makanan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold" />
+
+            <TextView
+                android:id="@+id/tv_allergies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memuat data alergi..."
+                android:textSize="14sp"
+                android:textColor="@color/on_surface_variant"
+                android:background="@color/surface_variant"
+                android:padding="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:minLines="2" />
+
+        </LinearLayout>
+
+        <!-- Medical Conditions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏥 Kondisi Medis"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold" />
+
+            <TextView
+                android:id="@+id/tv_medical_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memuat kondisi medis..."
+                android:textSize="14sp"
+                android:textColor="@color/on_surface_variant"
+                android:background="@color/surface_variant"
+                android:padding="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:minLines="2" />
+
+        </LinearLayout>
+
+        <!-- Emergency Instructions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 Instruksi Darurat"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold" />
+
+            <TextView
+                android:id="@+id/tv_emergency_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memuat instruksi darurat..."
+                android:textSize="14sp"
+                android:textColor="@color/on_surface_variant"
+                android:background="@color/surface_variant"
+                android:padding="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:minLines="3" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_share_info"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:text="Bagikan Info"
+                android:textSize="14sp"
+                android:layout_marginEnd="12dp"
+                app:icon="@drawable/ic_share"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:text="Tutup"
+                android:textSize="14sp"
+                style="@style/Widget.Material3.Button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

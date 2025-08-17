@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_notes"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tv_note_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Konsultasi dengan Dr. Budi"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/roboto_bold"
+                tools:text="Konsultasi dengan Dr. Budi" />
+
+        </LinearLayout>
+
+        <!-- Date Info -->
+        <TextView
+            android:id="@+id/tv_note_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal: 15 Agustus 2023"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_medium"
+            tools:text="Tanggal: 15 Agustus 2023" />
+
+        <!-- Doctor Name -->
+        <TextView
+            android:id="@+id/tv_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dokter: Dr. Budi Santoso, Sp.PD"
+            android:textSize="16sp"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:drawableStart="@drawable/ic_doctor"
+            android:drawablePadding="8dp"
+            app:drawableTint="@color/secondary"
+            tools:text="Dokter: Dr. Budi Santoso, Sp.PD" />
+
+        <!-- Hospital Name -->
+        <TextView
+            android:id="@+id/tv_hospital_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rumah Sakit: RS Siloam Kebon Jeruk"
+            android:textSize="16sp"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:drawableStart="@drawable/ic_hospital"
+            android:drawablePadding="8dp"
+            app:drawableTint="@color/secondary"
+            tools:text="Rumah Sakit: RS Siloam Kebon Jeruk" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/surface_variant"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Description Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/roboto_bold" />
+
+        <!-- Description Content -->
+        <TextView
+            android:id="@+id/tv_note_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasil pemeriksaan menunjukkan tekanan darah dalam batas normal (120/80 mmHg). Kadar gula darah puasa 95 mg/dL, masih dalam range normal. Pasien disarankan untuk tetap menjaga pola makan sehat, olahraga rutin, dan kontrol rutin setiap 3 bulan."
+            android:textSize="16sp"
+            android:textColor="@color/on_surface"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_regular"
+            tools:text="Hasil pemeriksaan menunjukkan tekanan darah dalam batas normal..." />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/surface_variant"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Created Date -->
+        <TextView
+            android:id="@+id/tv_created_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dibuat: 15 Agustus 2023, 14:30"
+            android:textSize="14sp"
+            android:textColor="@color/on_surface_variant"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/roboto_regular"
+            tools:text="Dibuat: 15 Agustus 2023, 14:30" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:text="Bagikan"
+                android:textSize="16sp"
+                android:layout_marginEnd="12dp"
+                app:icon="@drawable/ic_share"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:text="Tutup"
+                android:textSize="16sp"
+                style="@style/Widget.Material3.Button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
